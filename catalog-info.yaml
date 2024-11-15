@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: uyhr3345s-java-springboot-gitops
+  description: This is GitOps manifest for uyhr3345s-java-springboot   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: uyhr3345s-java-springboot
+    backstage.io/kubernetes-id: uyhr3345s-java-springboot 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: uyhr3345s-java-springboot-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:uyhr3345s-java-springboot
